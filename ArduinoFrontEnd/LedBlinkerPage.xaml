@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ArduinoFrontEnd.LedBlinkerPage"
+             xmlns:viewmodel="clr-namespace:ArduinoFrontEnd"
+             x:DataType="viewmodel:LedBlinkerViewModel"
+             Title="LedBlinkerPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Button Text="Go Back" Command="{Binding GoBackCommand}"/>
+        <Button Command="{Binding SendTimerCommand}" Text="Test" WidthRequest="100" HeightRequest="45" HorizontalOptions="Center" VerticalOptions="Center" Margin="10"/>
+        <DatePicker  HorizontalOptions="Center" MinimumDate="{Binding DatePicker.MinimumDate}"
+                     MaximumDate="{Binding DatePicker.MaximumDate}" Date="{Binding DatePicker.Date}" Margin="10"/>
+        <TimePicker Time="{Binding TimePicker}" Format="HH:MM:ss" HorizontalOptions="Center"/>
+    </VerticalStackLayout>
+</ContentPage>
